@@ -1,0 +1,30 @@
+/* Ultima Pro */
+@font-face {
+  font-family: 'Ultima Pro';
+  src: url('./UltimaPro-Bold.woff2') format('woff2'),
+       url('./UltimaPro-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Gotham Pro */
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url('./GothamPro-Medium.woff2') format('woff2'),
+       url('./GothamPro-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url('./GothamPro-Regular.woff2') format('woff2'),
+       url('./GothamPro-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fallback: используем похожие системные шрифты, пока не загружены файлы */
