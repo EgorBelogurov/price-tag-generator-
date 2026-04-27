@@ -2,8 +2,8 @@ import type { TemplateConfig, A4Settings } from '../types';
 
 export const templateConfig: TemplateConfig = {
   size: {
-    width: 7,  // см (горизонтальный формат)
-    height: 5, // см
+    width: 9.55,  // см (95.5 мм, скорректировано для точного 77 мм при печати)
+    height: 7.19, // см (71.9 мм, скорректировано для точного 58 мм при печати)
   },
   colors: {
     header: '#D4E5A6',     // светло-зеленый
