@@ -252,8 +252,8 @@ function App() {
         </table>
       `;
 
-      // Даем время на отрисовку (больше времени для таблиц)
-      await new Promise(resolve => setTimeout(resolve, 300));
+      // Даем время на отрисовку и загрузку шрифтов
+      await new Promise(resolve => setTimeout(resolve, 500));
 
       // Конвертируем в canvas с высоким качеством
       const canvas = await html2canvas(tagElement, {
@@ -264,6 +264,20 @@ function App() {
         logging: false,
         windowWidth: tagElement.scrollWidth,
         windowHeight: tagElement.scrollHeight,
+        onclone: (clonedDoc) => {
+          // Явно применяем font-weight к клонированным элементам
+          const clonedTable = clonedDoc.querySelector('table');
+          if (clonedTable) {
+            const priceSpan = clonedTable.querySelector('td:first-child span:first-child');
+            const nameDiv = clonedTable.querySelector('td:last-child > div > div > div:first-child');
+            if (priceSpan) {
+              priceSpan.style.fontWeight = String(priceFont.weight);
+            }
+            if (nameDiv) {
+              nameDiv.style.fontWeight = String(nameFont.weight);
+            }
+          }
+        },
       });
 
       // Добавляем в PDF
