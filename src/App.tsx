@@ -268,8 +268,8 @@ function App() {
           // Явно применяем font-weight к клонированным элементам
           const clonedTable = clonedDoc.querySelector('table');
           if (clonedTable) {
-            const priceSpan = clonedTable.querySelector('td:first-child span:first-child');
-            const nameDiv = clonedTable.querySelector('td:last-child > div > div > div:first-child');
+            const priceSpan = clonedTable.querySelector('td:first-child span:first-child') as HTMLElement;
+            const nameDiv = clonedTable.querySelector('td:last-child > div > div > div:first-child') as HTMLElement;
             if (priceSpan) {
               priceSpan.style.fontWeight = String(priceFont.weight);
             }
